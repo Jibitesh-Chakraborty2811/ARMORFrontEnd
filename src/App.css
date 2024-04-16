@@ -1,0 +1,756 @@
+
+.header {
+  background-color: #333;
+  overflow: hidden;
+  position: relative;
+  width: 70%;
+  height: 3.35rem;
+  float: left;
+  border: 0;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: relative;
+  width: 30%;
+  float: right;
+  border: none;
+  z-index: 20; /* Positioning over content */
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 20;
+}
+
+.topnav.active a:not(:first-child) {
+  display: block;
+  z-index: 20;
+}
+
+.topnav.active {
+  background-color: #333;
+  color: yellow;
+  width: 30%;
+  float: right;
+  z-index: 20;
+}
+
+.topnav .icon {
+  display: none;
+  z-index: 20;
+}
+
+/* Responsive Behavior */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+    position: relative;
+    z-index: 20;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+    position: relative;
+    z-index: 20;
+  }
+
+  .topnav.active a {
+    display: block;
+    position: relative;
+    z-index: 20;
+  }
+}
+
+#Footer {
+  height: 5rem;
+  background-color: #333;
+  
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+}
+
+#GMap {
+  height: 50.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 50.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+}
+
+
+
+#ContactDiv
+{
+  height: 50.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 50.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#WarnContainer
+{
+  height: 50.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 50.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#SignUpDiv
+{
+  height: 50.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 50.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#LoginDiv
+{
+  height: 50.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 50.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#ProfileDiv
+{
+  height: 50.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 50.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#PremiumDiv
+{
+  height: 90.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 90.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  align-items: center;
+}
+
+#PrivacyDiv
+{
+  height: 50.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 90.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  align-items: center;
+}
+#PremiumDiv{
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+
+}
+#premium-head1{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+}
+#standard-user, #power-user, #deluxe-user{
+  color: black;
+  font-weight: bold;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+}
+#standard-user-price, #power-user-price, #deluxe-user-price{
+  color:rgb(103, 95, 97);
+  font-weight: 600;
+}
+#ContactDiv{
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+}
+#contact-heading{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+}
+
+#contact-1{
+width:400px;
+font-size: 25px;
+color:rgb(34, 79, 5)
+}
+#contact-2{
+  font-size: 22px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+}
+#contact-email, #contact-no{
+  color:rgb(89, 91, 79);
+  font-weight: bold;
+}
+#contact-footer{
+  width:400px;
+  font-size:24px;
+  font-style: italic;
+  line-height:40px;
+  color:antiquewhite;
+  text-shadow: 0 0 10px gold;
+}
+#RecordingDiv{
+  height: 90.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 90.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  align-items: center;
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+}
+#recording-header{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+  margin-bottom:50px;
+}
+#recording-header2{
+  font-size: 25px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+}
+#recording-footer{
+  color:white;
+  font-weight: bold;
+  text-shadow: 0 0 10px lightcoral;
+}
+#ShareDiv{
+  height: 90.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 90.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  align-items: center;
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+
+}
+#share-header{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+  margin-bottom:30px;
+ 
+}
+#share-header2
+{
+  font-size: 30px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+}
+#share-info{
+  font-size: 30px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+  margin-top:40px;
+  margin-bottom:100px;
+}
+#feedback{
+  font-weight: bold;
+  color: rgb(235, 228, 228);
+  font-size:18px;
+}
+#PrivacyDiv{
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+}
+#privacy-header{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+  margin-bottom:30px;
+ 
+}
+#privacy-header2{
+  font-size: 30px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+}
+#fingerprint, #face-lock{
+  color:antiquewhite;
+  text-shadow: 0 0 10px rgb(52, 187, 19);
+  font-weight: 600;
+}
+#LoginDiv{
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+}
+#login-header{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+  margin-bottom:30px;
+ 
+}
+#login-info, #login-info2{
+  padding:15px;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color:rgb(16, 13, 13);
+  font-weight: 600;
+  text-shadow: 0 0 10px lightslategray;
+  font-family: Verdana;
+  
+}
+#login-button{
+  background-color: black;
+  color:rgb(250, 246, 246);
+  padding:15px 25px;
+  margin-top: 30px;
+  border-radius:10%;
+  border: 3px solid rgb(193, 193, 188);
+  box-shadow: 5px 5px 10px rgb(83, 83, 78);
+  font-size:25px;
+  font-family: Verdana;
+  margin-bottom: 16px;
+}
+#login-info3{
+  color:rgb(22, 22, 21);
+  font-size:22px;
+ 
+}
+#DiscoverDiv{
+  height: 90.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 90.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  align-items: center;
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+  height:80rem;
+}
+#explore{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+  margin-bottom:30px;
+}
+#explore-header{
+  font-size: 35px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+}
+#Discover-Div p{
+margin-left: 5px;
+text-align: left;
+
+}
+#explore-footer1{
+  font-style: italic;
+  font-weight: 700;
+  color:rgb(77, 74, 74);
+  
+}
+#explore-footer2{
+  font-style:oblique;
+  font-weight: bold;
+  color:whitesmoke;
+  text-shadow: 0 0 10px gold;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;;
+
+
+}
+#explore-footer3{
+  font-size: 25px;
+  color:black;
+  text-shadow: 0 0 10px whitesmoke;
+}
+#WarnContainer{
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+  height:50rem;
+
+}
+#warn-header{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+  margin-bottom:30px;
+}
+#duration, #warn{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding:8px;
+  font-size: 20 px;
+}
+#warn-button{
+  background-color: black;
+  color:rgb(250, 246, 246);
+  padding:8px 15px;
+  margin-top: 30px;
+  border-radius:10%;
+  border: 3px solid rgb(193, 193, 188);
+  box-shadow: 5px 5px 10px rgb(83, 83, 78);
+  font-size:25px;
+  font-family: Verdana;
+  margin-bottom: 16px;
+
+}
+#duration-{
+  font-size: 30px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+}
+#timer{
+  font-size: 30px;
+  color:black;
+  text-shadow: 0 0 10px gold;
+}
+#direction{
+  margin-top:30px;
+  color:white;
+  text-shadow: 0 0 10px black;
+}
+ #Warn, #Alert{
+  background-color: black;
+  color:rgb(250, 246, 246);
+  margin:10px;
+  padding:5px;
+  border-radius:10%;
+  border: 3px solid rgb(193, 193, 188);
+  box-shadow: 5px 5px 10px rgb(83, 83, 78);
+  font-size:20px;
+  font-family: Verdana;
+  }
+  #Panic{
+    background-color: red;
+   color:rgb(250, 246, 246);
+   margin:5px;
+  border-radius:50%;
+  padding :15px;
+  border: 3px solid rgb(193, 193, 188);
+  box-shadow: 5px 5px 10px rgb(83, 83, 78);
+  font-size:18px;
+  font-family: Verdana;
+  font-weight: bold;
+  }
+
+
+#ProfileDiv
+{
+  height: 90.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 90.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  align-items: center;
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+}
+
+#RecordArchive
+{
+  font-size: 15px;
+}
+#video, #audio,#stop{
+  background-color: rgb(69, 69, 65);
+  color:rgb(250, 246, 246);
+  padding:5px;
+  border-radius:10%;
+  border: 3px solid rgb(193, 193, 188);
+  box-shadow: 5px 5px 10px rgb(83, 83, 78);
+  font-size:15px;
+  font-family: Verdana;
+  
+}
+#warn-link{
+ color: white; 
+
+}
+#SignUpDiv{
+  height: 95.5rem;
+  position: absolute;
+  z-index: -1;
+  height: 95.5rem;
+  position: absolute;
+  top: 0; /* Ensures it starts at the top of the viewport */
+  left: 0; /* Ensures it starts at the left of the viewport */
+  width: 100%; /* Fills the entire viewport width */
+  z-index: -1; /* Renders behind other elements */
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  align-items: center;
+  background-image: linear-gradient(white,rgb(131, 200, 218),rgb(91, 91, 192));
+  color:black;
+  font-weight: 600;
+  font-family:Georgia;
+  font-size:20px;
+  height:55rem;
+  text-align: center;
+  height:90rem;
+  
+}
+
+#signup-header{
+  color:teal;
+  font-family:  Helvetica;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px gold;
+  margin-bottom:30px;
+}
+#Signup-name, #Signup-userid, #Signup-password, #Signup-email, #Signup-phone, #Signup-address, #Signup-c1, #Signup-c2, #Signup-c3, #Signup-aadhar
+{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+
+}
+#FileDiv
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+ #Signup-file{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left:10px;
+}
+#file
+{
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-bottom: 30px;
+}
+#signup-button{
+  background-color: black;
+  color:rgb(250, 246, 246);
+  margin:10px;
+  padding:15px;
+  border-radius:10%;
+  border: 3px solid rgb(193, 193, 188);
+  box-shadow: 5px 5px 10px rgb(83, 83, 78);
+  font-size:25px;
+  font-family: Verdana;
+}
+#login-signup{
+  color:white;
+}
+
+#WarnLink
+{
+  color:white;
+}
+
+
